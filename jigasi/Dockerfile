@@ -10,4 +10,11 @@ RUN \
 
 COPY rootfs/ /
 
+ADD jigasi-linux-x64-1.1-SNAPSHOT.tar.gz /usr/share
+
+RUN \
+	cd /usr/share && \
+	cp jigasi/collect-dump-logs.sh jigasi-linux-x64-1.1-SNAPSHOT/collect-dump-logs.sh && \
+	mv jigasi jigasi.old && mv jigasi-linux-x64-1.1-SNAPSHOT jigasi
+
 VOLUME ["/config", "/tmp/transcripts"]
