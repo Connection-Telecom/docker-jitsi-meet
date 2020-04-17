@@ -44,5 +44,7 @@ RUN \
 
 COPY rootfs/ /
 
+COPY jibri.jar /opt/jitsi/jibri/jibri.jar
+
 VOLUME /config
 
