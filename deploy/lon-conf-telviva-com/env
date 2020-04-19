@@ -28,13 +28,13 @@ PUBLIC_URL=https://lon.conf.telviva.com
 #
 
 # Enable Let's Encrypt certificate generation.
-ENABLE_LETSENCRYPT=1
+ENABLE_LETSENCRYPT=0
 
 # Domain for which to generate the certificate.
-LETSENCRYPT_DOMAIN=lon.conf.telviva.com
+#LETSENCRYPT_DOMAIN=lon.conf.telviva.com
 
 # E-Mail for receiving important account notifications (mandatory).
-LETSENCRYPT_EMAIL=support@connection-telecom.com
+#LETSENCRYPT_EMAIL=support@connection-telecom.com
 
 
 #
