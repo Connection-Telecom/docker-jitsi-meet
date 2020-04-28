@@ -37,4 +37,51 @@ prepare:
 	docker pull etherpad/etherpad
 	FORCE_REBUILD=1 $(MAKE)
 
+ecr-push:
+	@echo etherpad
+	docker tag jitsi/etherpad 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/etherpad:${GIT_COMMIT}
+	docker push 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/etherpad:${GIT_COMMIT}
+	docker tag jitsi/etherpad 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/etherpad:latest
+	docker push 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/etherpad:latest
+	@echo jibri
+	docker tag jitsi/jibri 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/jibri:${GIT_COMMIT}
+	docker push 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/jibri:${GIT_COMMIT}
+	docker tag jitsi/jibri 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/jibri:latest
+	docker push 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/jibri:latest
+	@echo jicofo
+	docker tag jitsi/jicofo 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/jicofo:${GIT_COMMIT}
+	docker push 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/jicofo:${GIT_COMMIT}
+	docker tag jitsi/jicofo 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/jicofo:latest
+	docker push 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/jicofo:latest
+	@echo jigasi
+	docker tag jitsi/jigasi 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/jigasi:${GIT_COMMIT}
+	docker push 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/jigasi:${GIT_COMMIT}
+	docker tag jitsi/jigasi 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/jigasi:latest
+	docker push 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/jigasi:latest
+	@echo jvb
+	docker tag jitsi/jvb 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/jvb:${GIT_COMMIT}
+	docker push 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/jvb:${GIT_COMMIT}
+	docker tag jitsi/jvb 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/jvb:latest
+	docker push 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/jvb:latest
+	@echo prosody
+	docker tag jitsi/prosody 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/prosody:${GIT_COMMIT}
+	docker push 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/prosody:${GIT_COMMIT}
+	docker tag jitsi/prosody 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/prosody:latest
+	docker push 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/prosody:latest
+	@echo web
+	docker tag jitsi/web 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/web:${GIT_COMMIT}
+	docker push 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/web:${GIT_COMMIT}
+	docker tag jitsi/web 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/web:latest
+	docker push 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/web:latest
+
+
+ecs-configure:
+	ecs-cli configure --cluster lon-conf-telviva-com --default-launch-type EC2 --region eu-west-2 --config-name lon-conf-telviva-com
+
+ecs-up:
+	ecs-cli up --keypair Steve --capability-iam --size 1 --instance-type m4.xlarge --launch-type EC2
+
+ecs-compose:
+	( cd deploy/lon-conf-telviva-com; ecs-cli compose --file docker-compose.yml up )
+
 .PHONY: all build tag push clean prepare

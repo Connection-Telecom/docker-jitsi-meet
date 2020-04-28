@@ -1,0 +1,20 @@
+
+About AWS Elastic Container Registry (ECR):
+
+658483010266.dkr.ecr.af-south-1.amazonaws.com/ctel
+
+https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html
+
+https://github.com/awslabs/amazon-ecr-credential-helper
+brew install docker-credential-helper-ecr
+
+
+# Configuring AWS cli:
+# 1. Get access keys:
+#   a. Go to https://console.aws.amazon.com/iam/home?region=af-south-1#/security_credentials
+#   b. If you don't know the secret key you'll have to make a new access key
+#        I'm using key AKIAZSUFFLLNAH4RWXKE / tEeHG...qjJ
+#   c.  aws configure
+
+# Authentication via a authorization token (yes, username is always AWS):
+aws ecr get-login-password --region af-south-1 | docker login --username AWS --password-stdin 658483010266.dkr.ecr.af-south-1.amazonaws.com
