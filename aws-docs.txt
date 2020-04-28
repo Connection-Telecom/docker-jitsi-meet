@@ -18,3 +18,21 @@ brew install docker-credential-helper-ecr
 
 # Authentication via a authorization token (yes, username is always AWS):
 aws ecr get-login-password --region af-south-1 | docker login --username AWS --password-stdin 658483010266.dkr.ecr.af-south-1.amazonaws.com
+
+# pushing images
+# a. tag em
+	docker tag jitsi/etherpad 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/etherpad:latest
+# b. push em
+	docker push 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/etherpad:latest
+
+
+# DEPLOY to AWS - looked at https://aws.amazon.com/blogs/opensource/getting-started-with-jitsi-an-open-source-web-conferencing-solution/
+
+# SSH KEYS - region specific - here I put my ssh key to AWS
+
+# Create a key pair that you will use to SSH into your Jitsi server.
+# From the EC2 console, on the left-hand side, click on Key Pairs and then use the Create button to create a PEM (default option) key pair.
+
+https://af-south-1.console.aws.amazon.com/ec2/v2/home?region=af-south-1#ImportKeyPair:
+
+
