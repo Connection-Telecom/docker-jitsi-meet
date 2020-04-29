@@ -77,23 +77,23 @@
         },
         {
           "name": "XMPP_AUTH_DOMAIN",
-          "value": "auth.lon.conf.telviva.com"
+          "value": "auth.cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_DOMAIN",
-          "value": "lon.conf.telviva.com"
+          "value": "cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_INTERNAL_MUC_DOMAIN",
-          "value": "internal-muc.lon.conf.telviva.com"
+          "value": "internal-muc.cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_RECORDER_DOMAIN",
-          "value": "recorder.lon.conf.telviva.com"
+          "value": "recorder.cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_SERVER",
-          "value": "xmpp.lon.conf.telviva.com"
+          "value": "xmpp.cpt.conf.telviva.com"
         }
       ],
       "resourceRequirements": null,
@@ -129,7 +129,7 @@
       "healthCheck": null,
       "essential": false,
       "links": [
-        "prosody:xmpp.lon.conf.telviva.com"
+        "prosody:xmpp.cpt.conf.telviva.com"
       ],
       "hostname": null,
       "extraHosts": null,
@@ -195,7 +195,7 @@
         },
         {
           "name": "JIGASI_SIP_URI",
-          "value": "conf@lon.conf.telviva.com"
+          "value": "conf@cpt.conf.telviva.com"
         },
         {
           "name": "JVB_BREWERY_MUC",
@@ -207,19 +207,19 @@
         },
         {
           "name": "XMPP_AUTH_DOMAIN",
-          "value": "auth.lon.conf.telviva.com"
+          "value": "auth.cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_DOMAIN",
-          "value": "lon.conf.telviva.com"
+          "value": "cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_INTERNAL_MUC_DOMAIN",
-          "value": "internal-muc.lon.conf.telviva.com"
+          "value": "internal-muc.cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_SERVER",
-          "value": "xmpp.lon.conf.telviva.com"
+          "value": "xmpp.cpt.conf.telviva.com"
         }
       ],
       "resourceRequirements": null,
@@ -247,7 +247,7 @@
       "healthCheck": null,
       "essential": true,
       "links": [
-        "prosody:xmpp.lon.conf.telviva.com"
+        "prosody:xmpp.cpt.conf.telviva.com"
       ],
       "hostname": null,
       "extraHosts": null,
@@ -613,7 +613,7 @@
         },
         {
           "name": "JIGASI_SIP_URI",
-          "value": "conf@lon.conf.telviva.com"
+          "value": "conf@cpt.conf.telviva.com"
         },
         {
           "name": "JIGASI_TRANSCRIBER_ADVERTISE_URL",
@@ -637,7 +637,7 @@
         },
         {
           "name": "PUBLIC_URL",
-          "value": "https://lon.conf.telviva.com"
+          "value": "https://cpt.conf.telviva.com"
         },
         {
           "name": "TZ",
@@ -645,19 +645,19 @@
         },
         {
           "name": "XMPP_AUTH_DOMAIN",
-          "value": "auth.lon.conf.telviva.com"
+          "value": "auth.cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_DOMAIN",
-          "value": "lon.conf.telviva.com"
+          "value": "cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_INTERNAL_MUC_DOMAIN",
-          "value": "internal-muc.lon.conf.telviva.com"
+          "value": "internal-muc.cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_SERVER",
-          "value": "xmpp.lon.conf.telviva.com"
+          "value": "xmpp.cpt.conf.telviva.com"
         }
       ],
       "resourceRequirements": null,
@@ -689,7 +689,7 @@
       "healthCheck": null,
       "essential": false,
       "links": [
-        "prosody:xmpp.lon.conf.telviva.com"
+        "prosody:xmpp.cpt.conf.telviva.com"
       ],
       "hostname": null,
       "extraHosts": null,
@@ -774,15 +774,15 @@
         },
         {
           "name": "XMPP_AUTH_DOMAIN",
-          "value": "auth.lon.conf.telviva.com"
+          "value": "auth.cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_INTERNAL_MUC_DOMAIN",
-          "value": "internal-muc.lon.conf.telviva.com"
+          "value": "internal-muc.cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_SERVER",
-          "value": "xmpp.lon.conf.telviva.com"
+          "value": "xmpp.cpt.conf.telviva.com"
         }
       ],
       "resourceRequirements": null,
@@ -810,7 +810,7 @@
       "healthCheck": null,
       "essential": true,
       "links": [
-        "prosody:xmpp.lon.conf.telviva.com"
+        "prosody:xmpp.cpt.conf.telviva.com"
       ],
       "hostname": null,
       "extraHosts": null,
@@ -1000,19 +1000,19 @@
         },
         {
           "name": "XMPP_AUTH_DOMAIN",
-          "value": "auth.lon.conf.telviva.com"
+          "value": "auth.cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_DOMAIN",
-          "value": "lon.conf.telviva.com"
+          "value": "cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_GUEST_DOMAIN",
-          "value": "guest.lon.conf.telviva.com"
+          "value": "guest.cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_INTERNAL_MUC_DOMAIN",
-          "value": "internal-muc.lon.conf.telviva.com"
+          "value": "internal-muc.cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_INTERNAL_MUC_MODULES",
@@ -1024,7 +1024,7 @@
         },
         {
           "name": "XMPP_MUC_DOMAIN",
-          "value": "muc.lon.conf.telviva.com"
+          "value": "muc.cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_MUC_MODULES",
@@ -1032,7 +1032,7 @@
         },
         {
           "name": "XMPP_RECORDER_DOMAIN",
-          "value": "recorder.lon.conf.telviva.com"
+          "value": "recorder.cpt.conf.telviva.com"
         }
       ],
       "resourceRequirements": null,
@@ -1060,7 +1060,7 @@
       "healthCheck": null,
       "essential": true,
       "links": [],
-      "hostname": "xmpp.lon.conf.telviva.com",
+      "hostname": "xmpp.cpt.conf.telviva.com",
       "extraHosts": null,
       "pseudoTerminal": false,
       "user": null,
@@ -1171,7 +1171,7 @@
         },
         {
           "name": "PUBLIC_URL",
-          "value": "https://lon.conf.telviva.com"
+          "value": "https://cpt.conf.telviva.com"
         },
         {
           "name": "TZ",
@@ -1179,27 +1179,27 @@
         },
         {
           "name": "XMPP_AUTH_DOMAIN",
-          "value": "auth.lon.conf.telviva.com"
+          "value": "auth.cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_BOSH_URL_BASE",
-          "value": "http://xmpp.lon.conf.telviva.com:5280"
+          "value": "http://xmpp.cpt.conf.telviva.com:5280"
         },
         {
           "name": "XMPP_DOMAIN",
-          "value": "lon.conf.telviva.com"
+          "value": "cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_GUEST_DOMAIN",
-          "value": "guest.lon.conf.telviva.com"
+          "value": "guest.cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_MUC_DOMAIN",
-          "value": "muc.lon.conf.telviva.com"
+          "value": "muc.cpt.conf.telviva.com"
         },
         {
           "name": "XMPP_RECORDER_DOMAIN",
-          "value": "recorder.lon.conf.telviva.com"
+          "value": "recorder.cpt.conf.telviva.com"
         }
       ],
       "resourceRequirements": null,
@@ -1235,7 +1235,7 @@
       "healthCheck": null,
       "essential": true,
       "links": [
-        "prosody:xmpp.lon.conf.telviva.com"
+        "prosody:xmpp.cpt.conf.telviva.com"
       ],
       "hostname": null,
       "extraHosts": null,
@@ -1254,8 +1254,7 @@
   "compatibilities": [
     "EC2"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:eu-west-2:658483010266:task-definition/lon-conf-telviva-com:13",
-  "family": "lon-conf-telviva-com",
+  "family": "cpt-conf-telviva-com",
   "requiresAttributes": [
     {
       "targetId": null,
