@@ -1,0 +1,1324 @@
+{
+  "ipcMode": null,
+  "executionRoleArn": null,
+  "containerDefinitions": [
+    {
+      "dnsSearchDomains": [],
+      "logConfiguration": null,
+      "entryPoint": [],
+      "portMappings": [],
+      "command": [],
+      "linuxParameters": {
+        "capabilities": {
+          "add": [
+            "SYS_ADMIN",
+            "NET_BIND_SERVICE"
+          ],
+          "drop": null
+        },
+        "sharedMemorySize": null,
+        "tmpfs": null,
+        "devices": [
+          {
+            "containerPath": "/dev/snd",
+            "hostPath": "/dev/snd",
+            "permissions": null
+          }
+        ],
+        "maxSwap": null,
+        "swappiness": null,
+        "initProcessEnabled": null
+      },
+      "cpu": 0,
+      "environment": [
+        {
+          "name": "DISPLAY",
+          "value": ":0"
+        },
+        {
+          "name": "JIBRI_BREWERY_MUC",
+          "value": "jibribrewery"
+        },
+        {
+          "name": "JIBRI_FINALIZE_RECORDING_SCRIPT_PATH",
+          "value": "/config/finalize.sh"
+        },
+        {
+          "name": "JIBRI_LOGS_DIR",
+          "value": "/config/logs"
+        },
+        {
+          "name": "JIBRI_RECORDER_PASSWORD",
+          "value": "1ede7ea35d8b3ac0de3b90e07325054c"
+        },
+        {
+          "name": "JIBRI_RECORDER_USER",
+          "value": "recorder"
+        },
+        {
+          "name": "JIBRI_RECORDING_DIR",
+          "value": "/config/recordings"
+        },
+        {
+          "name": "JIBRI_STRIP_DOMAIN_JID",
+          "value": "muc"
+        },
+        {
+          "name": "JIBRI_XMPP_PASSWORD",
+          "value": "1c8eab8ec9287253b290b48e4376b9e8"
+        },
+        {
+          "name": "JIBRI_XMPP_USER",
+          "value": "jibri"
+        },
+        {
+          "name": "TZ",
+          "value": "Europe/London"
+        },
+        {
+          "name": "XMPP_AUTH_DOMAIN",
+          "value": "auth.lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_DOMAIN",
+          "value": "lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_INTERNAL_MUC_DOMAIN",
+          "value": "internal-muc.lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_RECORDER_DOMAIN",
+          "value": "recorder.lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_SERVER",
+          "value": "xmpp.lon.conf.telviva.com"
+        }
+      ],
+      "resourceRequirements": null,
+      "ulimits": null,
+      "dnsServers": [],
+      "mountPoints": [
+        {
+	  "sourceVolume": "jitsi-config",
+	  "containerPath": "/config"
+	},
+        {
+	  "sourceVolume": "jitsi-recordings",
+	  "containerPath": "/recordings"
+	},
+        {
+	  "sourceVolume": "jitsi-shm",
+	  "containerPath": "/dev/shm"
+	}
+      ],
+      "workingDirectory": null,
+      "secrets": null,
+      "dockerSecurityOptions": [],
+      "memory": 5120,
+      "memoryReservation": 4096,
+      "volumesFrom": [],
+      "stopTimeout": null,
+      "image": "jitsi/jibri",
+      "startTimeout": null,
+      "firelensConfiguration": null,
+      "dependsOn": null,
+      "disableNetworking": null,
+      "interactive": null,
+      "healthCheck": null,
+      "essential": false,
+      "links": [
+        "prosody:xmpp.lon.conf.telviva.com"
+      ],
+      "hostname": null,
+      "extraHosts": null,
+      "pseudoTerminal": false,
+      "user": null,
+      "readonlyRootFilesystem": false,
+      "dockerLabels": null,
+      "systemControls": null,
+      "privileged": false,
+      "name": "jibri"
+    },
+    {
+      "dnsSearchDomains": [],
+      "logConfiguration": null,
+      "entryPoint": [],
+      "portMappings": [],
+      "command": [],
+      "linuxParameters": {
+        "capabilities": {
+          "add": null,
+          "drop": null
+        },
+        "sharedMemorySize": null,
+        "tmpfs": null,
+        "devices": null,
+        "maxSwap": null,
+        "swappiness": null,
+        "initProcessEnabled": null
+      },
+      "cpu": 0,
+      "environment": [
+        {
+          "name": "ENABLE_AUTH",
+          "value": ""
+        },
+        {
+          "name": "JIBRI_BREWERY_MUC",
+          "value": "jibribrewery"
+        },
+        {
+          "name": "JIBRI_PENDING_TIMEOUT",
+          "value": "90"
+        },
+        {
+          "name": "JICOFO_AUTH_PASSWORD",
+          "value": "bf3484c9e5bea905156234635280fcad"
+        },
+        {
+          "name": "JICOFO_AUTH_USER",
+          "value": "focus"
+        },
+        {
+          "name": "JICOFO_COMPONENT_SECRET",
+          "value": "559344174f9221c9feae0a9b12a6793a"
+        },
+        {
+          "name": "JICOFO_RESERVATION_REST_BASE_URL",
+          "value": ""
+        },
+        {
+          "name": "JIGASI_BREWERY_MUC",
+          "value": "jigasibrewery"
+        },
+        {
+          "name": "JIGASI_SIP_URI",
+          "value": "conf@lon.conf.telviva.com"
+        },
+        {
+          "name": "JVB_BREWERY_MUC",
+          "value": "jvbbrewery"
+        },
+        {
+          "name": "TZ",
+          "value": "Europe/London"
+        },
+        {
+          "name": "XMPP_AUTH_DOMAIN",
+          "value": "auth.lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_DOMAIN",
+          "value": "lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_INTERNAL_MUC_DOMAIN",
+          "value": "internal-muc.lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_SERVER",
+          "value": "xmpp.lon.conf.telviva.com"
+        }
+      ],
+      "resourceRequirements": null,
+      "ulimits": null,
+      "dnsServers": [],
+      "mountPoints": [
+        {
+	  "sourceVolume": "jitsi-config",
+	  "containerPath": "/config"
+	}
+      ],
+      "workingDirectory": null,
+      "secrets": null,
+      "dockerSecurityOptions": [],
+      "memory": 1024,
+      "memoryReservation": 1024,
+      "volumesFrom": [],
+      "stopTimeout": null,
+      "image": "jitsi/jicofo",
+      "startTimeout": null,
+      "firelensConfiguration": null,
+      "dependsOn": null,
+      "disableNetworking": null,
+      "interactive": null,
+      "healthCheck": null,
+      "essential": true,
+      "links": [
+        "prosody:xmpp.lon.conf.telviva.com"
+      ],
+      "hostname": null,
+      "extraHosts": null,
+      "pseudoTerminal": false,
+      "user": null,
+      "readonlyRootFilesystem": false,
+      "dockerLabels": null,
+      "systemControls": null,
+      "privileged": false,
+      "name": "jicofo"
+    },
+    {
+      "dnsSearchDomains": [],
+      "logConfiguration": null,
+      "entryPoint": [],
+      "portMappings": [
+        {
+          "hostPort": 20000,
+          "protocol": "udp",
+          "containerPort": 20000
+        },
+        {
+          "hostPort": 20001,
+          "protocol": "udp",
+          "containerPort": 20001
+        },
+        {
+          "hostPort": 20002,
+          "protocol": "udp",
+          "containerPort": 20002
+        },
+        {
+          "hostPort": 20003,
+          "protocol": "udp",
+          "containerPort": 20003
+        },
+        {
+          "hostPort": 20004,
+          "protocol": "udp",
+          "containerPort": 20004
+        },
+        {
+          "hostPort": 20005,
+          "protocol": "udp",
+          "containerPort": 20005
+        },
+        {
+          "hostPort": 20006,
+          "protocol": "udp",
+          "containerPort": 20006
+        },
+        {
+          "hostPort": 20007,
+          "protocol": "udp",
+          "containerPort": 20007
+        },
+        {
+          "hostPort": 20008,
+          "protocol": "udp",
+          "containerPort": 20008
+        },
+        {
+          "hostPort": 20009,
+          "protocol": "udp",
+          "containerPort": 20009
+        },
+        {
+          "hostPort": 20010,
+          "protocol": "udp",
+          "containerPort": 20010
+        },
+        {
+          "hostPort": 20011,
+          "protocol": "udp",
+          "containerPort": 20011
+        },
+        {
+          "hostPort": 20012,
+          "protocol": "udp",
+          "containerPort": 20012
+        },
+        {
+          "hostPort": 20013,
+          "protocol": "udp",
+          "containerPort": 20013
+        },
+        {
+          "hostPort": 20014,
+          "protocol": "udp",
+          "containerPort": 20014
+        },
+        {
+          "hostPort": 20015,
+          "protocol": "udp",
+          "containerPort": 20015
+        },
+        {
+          "hostPort": 20016,
+          "protocol": "udp",
+          "containerPort": 20016
+        },
+        {
+          "hostPort": 20017,
+          "protocol": "udp",
+          "containerPort": 20017
+        },
+        {
+          "hostPort": 20018,
+          "protocol": "udp",
+          "containerPort": 20018
+        },
+        {
+          "hostPort": 20019,
+          "protocol": "udp",
+          "containerPort": 20019
+        },
+        {
+          "hostPort": 20020,
+          "protocol": "udp",
+          "containerPort": 20020
+        },
+        {
+          "hostPort": 20021,
+          "protocol": "udp",
+          "containerPort": 20021
+        },
+        {
+          "hostPort": 20022,
+          "protocol": "udp",
+          "containerPort": 20022
+        },
+        {
+          "hostPort": 20023,
+          "protocol": "udp",
+          "containerPort": 20023
+        },
+        {
+          "hostPort": 20024,
+          "protocol": "udp",
+          "containerPort": 20024
+        },
+        {
+          "hostPort": 20025,
+          "protocol": "udp",
+          "containerPort": 20025
+        },
+        {
+          "hostPort": 20026,
+          "protocol": "udp",
+          "containerPort": 20026
+        },
+        {
+          "hostPort": 20027,
+          "protocol": "udp",
+          "containerPort": 20027
+        },
+        {
+          "hostPort": 20028,
+          "protocol": "udp",
+          "containerPort": 20028
+        },
+        {
+          "hostPort": 20029,
+          "protocol": "udp",
+          "containerPort": 20029
+        },
+        {
+          "hostPort": 20030,
+          "protocol": "udp",
+          "containerPort": 20030
+        },
+        {
+          "hostPort": 20031,
+          "protocol": "udp",
+          "containerPort": 20031
+        },
+        {
+          "hostPort": 20032,
+          "protocol": "udp",
+          "containerPort": 20032
+        },
+        {
+          "hostPort": 20033,
+          "protocol": "udp",
+          "containerPort": 20033
+        },
+        {
+          "hostPort": 20034,
+          "protocol": "udp",
+          "containerPort": 20034
+        },
+        {
+          "hostPort": 20035,
+          "protocol": "udp",
+          "containerPort": 20035
+        },
+        {
+          "hostPort": 20036,
+          "protocol": "udp",
+          "containerPort": 20036
+        },
+        {
+          "hostPort": 20037,
+          "protocol": "udp",
+          "containerPort": 20037
+        },
+        {
+          "hostPort": 20038,
+          "protocol": "udp",
+          "containerPort": 20038
+        },
+        {
+          "hostPort": 20039,
+          "protocol": "udp",
+          "containerPort": 20039
+        },
+        {
+          "hostPort": 20040,
+          "protocol": "udp",
+          "containerPort": 20040
+        },
+        {
+          "hostPort": 20041,
+          "protocol": "udp",
+          "containerPort": 20041
+        },
+        {
+          "hostPort": 20042,
+          "protocol": "udp",
+          "containerPort": 20042
+        },
+        {
+          "hostPort": 20043,
+          "protocol": "udp",
+          "containerPort": 20043
+        },
+        {
+          "hostPort": 20044,
+          "protocol": "udp",
+          "containerPort": 20044
+        },
+        {
+          "hostPort": 20045,
+          "protocol": "udp",
+          "containerPort": 20045
+        },
+        {
+          "hostPort": 20046,
+          "protocol": "udp",
+          "containerPort": 20046
+        },
+        {
+          "hostPort": 20047,
+          "protocol": "udp",
+          "containerPort": 20047
+        },
+        {
+          "hostPort": 20048,
+          "protocol": "udp",
+          "containerPort": 20048
+        },
+        {
+          "hostPort": 20049,
+          "protocol": "udp",
+          "containerPort": 20049
+        },
+        {
+          "hostPort": 20050,
+          "protocol": "udp",
+          "containerPort": 20050
+        }
+      ],
+      "command": [],
+      "linuxParameters": {
+        "capabilities": {
+          "add": null,
+          "drop": null
+        },
+        "sharedMemorySize": null,
+        "tmpfs": null,
+        "devices": null,
+        "maxSwap": null,
+        "swappiness": null,
+        "initProcessEnabled": null
+      },
+      "cpu": 0,
+      "environment": [
+        {
+          "name": "ENABLE_AUTH",
+          "value": ""
+        },
+        {
+          "name": "ENABLE_TRANSCRIPTIONS",
+          "value": "1"
+        },
+        {
+          "name": "GC_CLIENT_CERT_URL",
+          "value": "https://www.googleapis.com/robot/v1/metadata/x509/telviva-one-conferencing-jitsi%40telviva-one.iam.gserviceaccount.com"
+        },
+        {
+          "name": "GC_CLIENT_EMAIL",
+          "value": "telviva-one-conferencing-jitsi@telviva-one.iam.gserviceaccount.com"
+        },
+        {
+          "name": "GC_CLIENT_ID",
+          "value": "116297808143040390900"
+        },
+        {
+          "name": "GC_PRIVATE_KEY",
+          "value": "-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDOI08ITFMnw3rO\\nczJbVNvi7H81dwv3wxzylQjDVdGgK0jGQ9eMB13oMO4meX/odyxfOxy1W94nnIja\\n3f5PHrl9iycYohGi1uHhgixLX+a4FWdVhznRt2iHKpRViSbHLO0EaBo0qRP+GT8T\\nI+t3CsN34is0Ll3mNLIghasocLRVDzjMc33W7v/DEDP1D92Lqjsnpsdt6DAK/ACn\\n/iLGGMbMK3+I+vurmMKCOsqVaBPWlPS5FNn9eaw82mSuELaTUD7dke+guC1CgdBV\\niLa6J6aaJcrZHsmz1Od5x1GPu81Nc+ysbOnejLg4QjOA09m/KOOaM9+MFbThHs+3\\n1icNl18rAgMBAAECggEADVaCiB5sKQAAg7g3c2pnueSkjICR8SuaRWX4Ra9ZW3xB\\nfraoDULyxBHabvngmVmQsO7Bukhh9P0va73+dP8fcGyfEHx4GKm/vtgt5oijhJi5\\n8XJI/vVXmZtbMrenny6cfXMA8xRXm1Ll3mauFytGn4yuT/eKEtmpBuqvOvQj7vbp\\n6alVvr/dip9iswTyH+zPEADkwl8Ag/uvhkNrldehYw2rhWoR+NuR4FXOQFbg/2st\\nyoXttRiQOo1XxRdPbFbQDL09PsyEdCTgY+eti/ldvsjn4tRl79GETw79yAxGpaVP\\nm/AiKjaOapm3s02iwZHghaiJM7skdjCzhKQAkeaqeQKBgQDxau1+RgC/aGBXEUkX\\nVDb4zKAB+Lbw11yy3hEVXhmJYThi5HwwfdkpKNtZwe4e6XcOlxujoViKr28+6oPZ\\nGQKykHe/TSzex/k6hWT/P2iAvajTYBMC8gs3lp0xGDomO66357Lf6HSmLjOr81qf\\nrKfleZw0GLiu7jKlEt/OJrjKeQKBgQDalth4Pbva16hjP9zM/GHIY4qS6XMeHqGo\\naFdAtIDXSlimbrrmKyZlOaMkBsDH5vqCY41wAxEkvryZA7/JXY1tLVw8GKMbfHnD\\nIlRZDR6cNUDjUzywvSwc8Q/Qp62uUY3Uy4Dz4APt3jhJnIu6C3Zz2N5+EPgiB/te\\nB2zH7bUNwwKBgQC1h0CjRYIEazid34qFNzbKqBrcwKbWvCmg+agA2Cv9iBP9EG9t\\niwPClk0x1cf2iHiUiP0ocgcA6V+OAIs5sDu+BzFzsFVAA0AdR/akk4pB29rZbhF9\\nkoDqwJ7cLqpy20fKUzfGc6Va27zQ3ADVtd7dhy70YW5lYwjD5UhSW/1xiQKBgBX2\\nnC+QvGRj0OaQDyaFoWmaHt1eGZQILeQW/9VfjaaUMM4gSCVCZqw7G1pOV2Z+neMm\\nD5sWo81WYOrbBpU8Ei7LJP5g11q2qiFiPKlp+Q5nB2sP/QQhLeKGkjk77+aZCTA9\\ndmqKsrpe3rb+xMdfyXoga1Ktb9Ezjh1Hj7WS++MzAoGAaAalJl6Pk1KiBv4rAeqU\\nnpvPP1uqhJVI+OEJGRFvXnXDJNi9vyxyaPHCM36zwieoMP3NvglMlBm1eqx82QNN\\nLkQ6BZlv5rFAcLsMd38uSJD9ogftpEDdb2ScF5R5OnypROIDqJ6q3qvOA7M6pg4h\\n7sn8qt5hmjYqfHOJKKYFqmE=\\n-----END PRIVATE KEY-----\\n"
+        },
+        {
+          "name": "GC_PRIVATE_KEY_ID",
+          "value": "1b98be2ccb62ffb50bd69cc2f9aa6fa87c114f4c"
+        },
+        {
+          "name": "GC_PROJECT_ID",
+          "value": "telviva-one"
+        },
+        {
+          "name": "JIGASI_BREWERY_MUC",
+          "value": "jigasibrewery"
+        },
+        {
+          "name": "JIGASI_ENABLE_SDES_SRTP",
+          "value": ""
+        },
+        {
+          "name": "JIGASI_HEALTH_CHECK_INTERVAL",
+          "value": ""
+        },
+        {
+          "name": "JIGASI_HEALTH_CHECK_SIP_URI",
+          "value": ""
+        },
+        {
+          "name": "JIGASI_PORT_MAX",
+          "value": "20050"
+        },
+        {
+          "name": "JIGASI_PORT_MIN",
+          "value": "20000"
+        },
+        {
+          "name": "JIGASI_SIP_KEEP_ALIVE_METHOD",
+          "value": ""
+        },
+        {
+          "name": "JIGASI_SIP_PASSWORD",
+          "value": "NOT-SET"
+        },
+        {
+          "name": "JIGASI_SIP_PORT",
+          "value": "5060"
+        },
+        {
+          "name": "JIGASI_SIP_SERVER",
+          "value": "sip.telviva.com"
+        },
+        {
+          "name": "JIGASI_SIP_TRANSPORT",
+          "value": "UDP"
+        },
+        {
+          "name": "JIGASI_SIP_URI",
+          "value": "conf@lon.conf.telviva.com"
+        },
+        {
+          "name": "JIGASI_TRANSCRIBER_ADVERTISE_URL",
+          "value": "true"
+        },
+        {
+          "name": "JIGASI_TRANSCRIBER_RECORD_AUDIO",
+          "value": "true"
+        },
+        {
+          "name": "JIGASI_TRANSCRIBER_SEND_TXT",
+          "value": "true"
+        },
+        {
+          "name": "JIGASI_XMPP_PASSWORD",
+          "value": "96e9c613079eac85d6d78a7128eebce3"
+        },
+        {
+          "name": "JIGASI_XMPP_USER",
+          "value": "jigasi"
+        },
+        {
+          "name": "PUBLIC_URL",
+          "value": "https://lon.conf.telviva.com"
+        },
+        {
+          "name": "TZ",
+          "value": "Europe/London"
+        },
+        {
+          "name": "XMPP_AUTH_DOMAIN",
+          "value": "auth.lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_DOMAIN",
+          "value": "lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_INTERNAL_MUC_DOMAIN",
+          "value": "internal-muc.lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_SERVER",
+          "value": "xmpp.lon.conf.telviva.com"
+        }
+      ],
+      "resourceRequirements": null,
+      "ulimits": null,
+      "dnsServers": [],
+      "mountPoints": [
+        {
+	  "sourceVolume": "jitsi-config",
+	  "containerPath": "/config"
+	},
+        {
+	  "sourceVolume": "jitsi-transcripts",
+	  "containerPath": "/transcripts"
+	}
+      ],
+      "workingDirectory": null,
+      "secrets": null,
+      "dockerSecurityOptions": [],
+      "memory": 1024,
+      "memoryReservation": 1024,
+      "volumesFrom": [],
+      "stopTimeout": null,
+      "image": "jitsi/jigasi",
+      "startTimeout": null,
+      "firelensConfiguration": null,
+      "dependsOn": null,
+      "disableNetworking": null,
+      "interactive": null,
+      "healthCheck": null,
+      "essential": false,
+      "links": [
+        "prosody:xmpp.lon.conf.telviva.com"
+      ],
+      "hostname": null,
+      "extraHosts": null,
+      "pseudoTerminal": false,
+      "user": null,
+      "readonlyRootFilesystem": false,
+      "dockerLabels": null,
+      "systemControls": null,
+      "privileged": false,
+      "name": "jigasi"
+    },
+    {
+      "dnsSearchDomains": [],
+      "logConfiguration": null,
+      "entryPoint": [],
+      "portMappings": [
+        {
+          "hostPort": 10000,
+          "protocol": "udp",
+          "containerPort": 10000
+        },
+        {
+          "hostPort": 4443,
+          "protocol": "tcp",
+          "containerPort": 4443
+        }
+      ],
+      "command": [],
+      "linuxParameters": {
+        "capabilities": {
+          "add": null,
+          "drop": null
+        },
+        "sharedMemorySize": null,
+        "tmpfs": null,
+        "devices": null,
+        "maxSwap": null,
+        "swappiness": null,
+        "initProcessEnabled": null
+      },
+      "cpu": 0,
+      "environment": [
+        {
+          "name": "DOCKER_HOST_ADDRESS",
+          "value": ""
+        },
+        {
+          "name": "JVB_AUTH_PASSWORD",
+          "value": "ef669504126b175e9239df418e49d2c0"
+        },
+        {
+          "name": "JVB_AUTH_USER",
+          "value": "jvb"
+        },
+        {
+          "name": "JVB_BREWERY_MUC",
+          "value": "jvbbrewery"
+        },
+        {
+          "name": "JVB_ENABLE_APIS",
+          "value": ""
+        },
+        {
+          "name": "JVB_PORT",
+          "value": "10000"
+        },
+        {
+          "name": "JVB_STUN_SERVERS",
+          "value": "stun.telviva.com:3478 "
+        },
+        {
+          "name": "JVB_TCP_HARVESTER_DISABLED",
+          "value": "true"
+        },
+        {
+          "name": "JVB_TCP_PORT",
+          "value": "4443"
+        },
+        {
+          "name": "TZ",
+          "value": "Europe/London"
+        },
+        {
+          "name": "XMPP_AUTH_DOMAIN",
+          "value": "auth.lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_INTERNAL_MUC_DOMAIN",
+          "value": "internal-muc.lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_SERVER",
+          "value": "xmpp.lon.conf.telviva.com"
+        }
+      ],
+      "resourceRequirements": null,
+      "ulimits": null,
+      "dnsServers": [],
+      "mountPoints": [
+        {
+	  "sourceVolume": "jitsi-config",
+	  "containerPath": "/config"
+	}
+      ],
+      "workingDirectory": null,
+      "secrets": null,
+      "dockerSecurityOptions": [],
+      "memory": 5120,
+      "memoryReservation": 4096,
+      "volumesFrom": [],
+      "stopTimeout": null,
+      "image": "jitsi/jvb",
+      "startTimeout": null,
+      "firelensConfiguration": null,
+      "dependsOn": null,
+      "disableNetworking": null,
+      "interactive": null,
+      "healthCheck": null,
+      "essential": true,
+      "links": [
+        "prosody:xmpp.lon.conf.telviva.com"
+      ],
+      "hostname": null,
+      "extraHosts": null,
+      "pseudoTerminal": false,
+      "user": null,
+      "readonlyRootFilesystem": false,
+      "dockerLabels": null,
+      "systemControls": null,
+      "privileged": false,
+      "name": "jvb"
+    },
+    {
+      "dnsSearchDomains": [],
+      "logConfiguration": null,
+      "entryPoint": [],
+      "portMappings": [],
+      "command": [],
+      "linuxParameters": {
+        "capabilities": {
+          "add": null,
+          "drop": null
+        },
+        "sharedMemorySize": null,
+        "tmpfs": null,
+        "devices": null,
+        "maxSwap": null,
+        "swappiness": null,
+        "initProcessEnabled": null
+      },
+      "cpu": 0,
+      "environment": [
+        {
+          "name": "AUTH_TYPE",
+          "value": ""
+        },
+        {
+          "name": "ENABLE_AUTH",
+          "value": ""
+        },
+        {
+          "name": "ENABLE_GUESTS",
+          "value": ""
+        },
+        {
+          "name": "GLOBAL_CONFIG",
+          "value": ""
+        },
+        {
+          "name": "GLOBAL_MODULES",
+          "value": ""
+        },
+        {
+          "name": "JIBRI_RECORDER_PASSWORD",
+          "value": "1ede7ea35d8b3ac0de3b90e07325054c"
+        },
+        {
+          "name": "JIBRI_RECORDER_USER",
+          "value": "recorder"
+        },
+        {
+          "name": "JIBRI_XMPP_PASSWORD",
+          "value": "1c8eab8ec9287253b290b48e4376b9e8"
+        },
+        {
+          "name": "JIBRI_XMPP_USER",
+          "value": "jibri"
+        },
+        {
+          "name": "JICOFO_AUTH_PASSWORD",
+          "value": "bf3484c9e5bea905156234635280fcad"
+        },
+        {
+          "name": "JICOFO_AUTH_USER",
+          "value": "focus"
+        },
+        {
+          "name": "JICOFO_COMPONENT_SECRET",
+          "value": "559344174f9221c9feae0a9b12a6793a"
+        },
+        {
+          "name": "JIGASI_XMPP_PASSWORD",
+          "value": "96e9c613079eac85d6d78a7128eebce3"
+        },
+        {
+          "name": "JIGASI_XMPP_USER",
+          "value": "jigasi"
+        },
+        {
+          "name": "JVB_AUTH_PASSWORD",
+          "value": "ef669504126b175e9239df418e49d2c0"
+        },
+        {
+          "name": "JVB_AUTH_USER",
+          "value": "jvb"
+        },
+        {
+          "name": "JWT_ACCEPTED_AUDIENCES",
+          "value": ""
+        },
+        {
+          "name": "JWT_ACCEPTED_ISSUERS",
+          "value": ""
+        },
+        {
+          "name": "JWT_ALLOW_EMPTY",
+          "value": ""
+        },
+        {
+          "name": "JWT_APP_ID",
+          "value": ""
+        },
+        {
+          "name": "JWT_APP_SECRET",
+          "value": ""
+        },
+        {
+          "name": "JWT_ASAP_KEYSERVER",
+          "value": ""
+        },
+        {
+          "name": "JWT_AUTH_TYPE",
+          "value": ""
+        },
+        {
+          "name": "JWT_TOKEN_AUTH_MODULE",
+          "value": ""
+        },
+        {
+          "name": "LDAP_AUTH_METHOD",
+          "value": ""
+        },
+        {
+          "name": "LDAP_BASE",
+          "value": ""
+        },
+        {
+          "name": "LDAP_BINDDN",
+          "value": ""
+        },
+        {
+          "name": "LDAP_BINDPW",
+          "value": ""
+        },
+        {
+          "name": "LDAP_FILTER",
+          "value": ""
+        },
+        {
+          "name": "LDAP_START_TLS",
+          "value": ""
+        },
+        {
+          "name": "LDAP_TLS_CACERT_DIR",
+          "value": ""
+        },
+        {
+          "name": "LDAP_TLS_CACERT_FILE",
+          "value": ""
+        },
+        {
+          "name": "LDAP_TLS_CHECK_PEER",
+          "value": ""
+        },
+        {
+          "name": "LDAP_TLS_CIPHERS",
+          "value": ""
+        },
+        {
+          "name": "LDAP_URL",
+          "value": ""
+        },
+        {
+          "name": "LDAP_USE_TLS",
+          "value": ""
+        },
+        {
+          "name": "LDAP_VERSION",
+          "value": ""
+        },
+        {
+          "name": "LOG_LEVEL",
+          "value": ""
+        },
+        {
+          "name": "TZ",
+          "value": "Europe/London"
+        },
+        {
+          "name": "XMPP_AUTH_DOMAIN",
+          "value": "auth.lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_DOMAIN",
+          "value": "lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_GUEST_DOMAIN",
+          "value": "guest.lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_INTERNAL_MUC_DOMAIN",
+          "value": "internal-muc.lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_INTERNAL_MUC_MODULES",
+          "value": ""
+        },
+        {
+          "name": "XMPP_MODULES",
+          "value": ""
+        },
+        {
+          "name": "XMPP_MUC_DOMAIN",
+          "value": "muc.lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_MUC_MODULES",
+          "value": ""
+        },
+        {
+          "name": "XMPP_RECORDER_DOMAIN",
+          "value": "recorder.lon.conf.telviva.com"
+        }
+      ],
+      "resourceRequirements": null,
+      "ulimits": null,
+      "dnsServers": [],
+      "mountPoints": [
+        {
+	  "sourceVolume": "jitsi-config",
+	  "containerPath": "/config"
+	}
+      ],
+      "workingDirectory": null,
+      "secrets": null,
+      "dockerSecurityOptions": [],
+      "memory": 1024,
+      "memoryReservation": 1024,
+      "volumesFrom": [],
+      "stopTimeout": null,
+      "image": "jitsi/prosody",
+      "startTimeout": null,
+      "firelensConfiguration": null,
+      "dependsOn": null,
+      "disableNetworking": null,
+      "interactive": null,
+      "healthCheck": null,
+      "essential": true,
+      "links": [],
+      "hostname": "xmpp.lon.conf.telviva.com",
+      "extraHosts": null,
+      "pseudoTerminal": false,
+      "user": null,
+      "readonlyRootFilesystem": false,
+      "dockerLabels": null,
+      "systemControls": null,
+      "privileged": false,
+      "name": "prosody"
+    },
+    {
+      "dnsSearchDomains": [],
+      "logConfiguration": null,
+      "entryPoint": [],
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "protocol": "tcp",
+          "containerPort": 80
+        },
+        {
+          "hostPort": 443,
+          "protocol": "tcp",
+          "containerPort": 443
+        }
+      ],
+      "command": [],
+      "linuxParameters": {
+        "capabilities": {
+          "add": null,
+          "drop": null
+        },
+        "sharedMemorySize": null,
+        "tmpfs": null,
+        "devices": null,
+        "maxSwap": null,
+        "swappiness": null,
+        "initProcessEnabled": null
+      },
+      "cpu": 0,
+      "environment": [
+        {
+          "name": "DISABLE_HTTPS",
+          "value": "0"
+        },
+        {
+          "name": "ENABLE_AUTH",
+          "value": ""
+        },
+        {
+          "name": "ENABLE_GUESTS",
+          "value": ""
+        },
+        {
+          "name": "ENABLE_HTTP_REDIRECT",
+          "value": "0"
+        },
+        {
+          "name": "ENABLE_LETSENCRYPT",
+          "value": "0"
+        },
+        {
+          "name": "ENABLE_RECORDING",
+          "value": "1"
+        },
+        {
+          "name": "ENABLE_TRANSCRIPTIONS",
+          "value": "1"
+        },
+        {
+          "name": "ETHERPAD_URL_BASE",
+          "value": ""
+        },
+        {
+          "name": "JIBRI_BREWERY_MUC",
+          "value": "jibribrewery"
+        },
+        {
+          "name": "JIBRI_PENDING_TIMEOUT",
+          "value": "90"
+        },
+        {
+          "name": "JIBRI_RECORDER_PASSWORD",
+          "value": "1ede7ea35d8b3ac0de3b90e07325054c"
+        },
+        {
+          "name": "JIBRI_RECORDER_USER",
+          "value": "recorder"
+        },
+        {
+          "name": "JIBRI_XMPP_PASSWORD",
+          "value": "1c8eab8ec9287253b290b48e4376b9e8"
+        },
+        {
+          "name": "JIBRI_XMPP_USER",
+          "value": "jibri"
+        },
+        {
+          "name": "JICOFO_AUTH_USER",
+          "value": "focus"
+        },
+        {
+          "name": "LETSENCRYPT_DOMAIN",
+          "value": ""
+        },
+        {
+          "name": "LETSENCRYPT_EMAIL",
+          "value": ""
+        },
+        {
+          "name": "PUBLIC_URL",
+          "value": "https://lon.conf.telviva.com"
+        },
+        {
+          "name": "TZ",
+          "value": "Europe/London"
+        },
+        {
+          "name": "XMPP_AUTH_DOMAIN",
+          "value": "auth.lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_BOSH_URL_BASE",
+          "value": "http://xmpp.lon.conf.telviva.com:5280"
+        },
+        {
+          "name": "XMPP_DOMAIN",
+          "value": "lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_GUEST_DOMAIN",
+          "value": "guest.lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_MUC_DOMAIN",
+          "value": "muc.lon.conf.telviva.com"
+        },
+        {
+          "name": "XMPP_RECORDER_DOMAIN",
+          "value": "recorder.lon.conf.telviva.com"
+        }
+      ],
+      "resourceRequirements": null,
+      "ulimits": null,
+      "dnsServers": [],
+      "mountPoints": [
+        {
+	  "sourceVolume": "jitsi-config",
+	  "containerPath": "/config"
+	},
+        {
+	  "sourceVolume": "jitsi-transcripts",
+	  "containerPath": "/usr/share/jitsi-meet/transcripts"
+	},
+        {
+	  "sourceVolume": "jitsi-recordings",
+	  "containerPath": "/usr/share/jitsi-meet/recordings"
+	}
+      ],
+      "workingDirectory": null,
+      "secrets": null,
+      "dockerSecurityOptions": [],
+      "memory": 1024,
+      "memoryReservation": 512,
+      "volumesFrom": [],
+      "stopTimeout": null,
+      "image": "jitsi/web",
+      "startTimeout": null,
+      "firelensConfiguration": null,
+      "dependsOn": null,
+      "disableNetworking": null,
+      "interactive": null,
+      "healthCheck": null,
+      "essential": true,
+      "links": [
+        "prosody:xmpp.lon.conf.telviva.com"
+      ],
+      "hostname": null,
+      "extraHosts": null,
+      "pseudoTerminal": false,
+      "user": null,
+      "readonlyRootFilesystem": false,
+      "dockerLabels": null,
+      "systemControls": null,
+      "privileged": false,
+      "name": "web"
+    }
+  ],
+  "placementConstraints": [],
+  "memory": null,
+  "taskRoleArn": null,
+  "compatibilities": [
+    "EC2"
+  ],
+  "taskDefinitionArn": "arn:aws:ecs:eu-west-2:658483010266:task-definition/lon-conf-telviva-com:13",
+  "family": "lon-conf-telviva-com",
+  "requiresAttributes": [
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+    }
+  ],
+  "pidMode": null,
+  "requiresCompatibilities": [
+    "EC2"
+  ],
+  "networkMode": null,
+  "cpu": null,
+  "revision": 13,
+  "status": "ACTIVE",
+  "inferenceAccelerators": null,
+  "proxyConfiguration": null,
+  "volumes": [
+    {
+      "name": "jitsi-config",
+      "dockerVolumeConfiguration" : {
+        "scope": "shared",
+         "autoprovision": true,
+         "driver": "local",
+         "labels": {
+           "config": "jitsi"
+         }
+      }
+    },
+    {
+      "name": "jitsi-recordings",
+      "dockerVolumeConfiguration" : {
+        "scope": "shared",
+        "autoprovision": true,
+        "driver": "local",
+        "labels": {
+          "recordings": "jitsi"
+        }
+      }
+    },
+    {
+      "name": "jitsi-transcripts",
+      "dockerVolumeConfiguration" : {
+        "scope": "shared",
+        "autoprovision": true,
+        "driver": "local",
+        "labels": {
+          "recordings": "jitsi"
+        }
+      }
+    },
+    {
+      "name": "jitsi-shm",
+      "host": {
+        "sourcePath": "/dev/shm"
+      }
+    }
+  ]
+}

@@ -25,6 +25,9 @@ aws ecr get-login-password --region af-south-1 | docker login --username AWS --p
 # b. push em
 	docker push 658483010266.dkr.ecr.af-south-1.amazonaws.com/jitsi/etherpad:latest
 
+# my Makefile:
+GIT_COMMIT=`git log | head -1 | awk '{ print $2 }'` make ecr-push
+
 
 # DEPLOY to AWS - looked at https://aws.amazon.com/blogs/opensource/getting-started-with-jitsi-an-open-source-web-conferencing-solution/
 

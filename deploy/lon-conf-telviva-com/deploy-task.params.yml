@@ -1,0 +1,27 @@
+version: 1
+task_definition:
+        services:
+                prosody:
+                        essential: true
+                        mem_limit: 1GB
+                        mem_reservation: 1GB
+                jvb:
+                        essential: true
+                        mem_limit: 5GB
+                        mem_reservation: 4GB
+                jicofo:
+                        essential: true
+                        mem_limit: 1GB
+                        mem_reservation: 1GB
+                web:
+                        essential: true
+                        mem_limit: 1GB
+                        mem_reservation: 0.5GB
+                jigasi:
+                        essential: false
+                        mem_limit: 1GB
+                        mem_reservation: 1GB
+                jibri:
+                        essential: false
+                        mem_limit: 5GB
+                        mem_reservation: 4GB
