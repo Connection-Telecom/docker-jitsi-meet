@@ -35,4 +35,9 @@ aws ecr get-login-password --region af-south-1 | docker login --username AWS --p
 
 https://af-south-1.console.aws.amazon.com/ec2/v2/home?region=af-south-1#ImportKeyPair:
 
+# configure cluster
+ecs-cli configure --cluster cpt-conf-telviva-com --default-launch-type EC2 --region af-south-1 --config-name cpt-conf-telviva-com
+
+# Bring up ECS Cluster (the "docker host")
+ecs-cli up --keypair steve --capability-iam --size 1 --instance-type m4.xlarge --launch-type EC2 --size 2
 
