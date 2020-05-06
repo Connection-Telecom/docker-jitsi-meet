@@ -73,7 +73,7 @@
         },
         {
           "name": "TZ",
-          "value": "Europe/London"
+          "value": "Africa/Johannesburg"
         },
         {
           "name": "XMPP_AUTH_DOMAIN",
@@ -100,10 +100,6 @@
       "ulimits": null,
       "dnsServers": [],
       "mountPoints": [
-        {
-	  "sourceVolume": "jitsi-config",
-	  "containerPath": "/config"
-	},
         {
 	  "sourceVolume": "jitsi-recordings",
 	  "containerPath": "/recordings"
@@ -203,7 +199,7 @@
         },
         {
           "name": "TZ",
-          "value": "Europe/London"
+          "value": "Africa/Johannesburg"
         },
         {
           "name": "XMPP_AUTH_DOMAIN",
@@ -226,10 +222,6 @@
       "ulimits": null,
       "dnsServers": [],
       "mountPoints": [
-        {
-	  "sourceVolume": "jitsi-config",
-	  "containerPath": "/config"
-	}
       ],
       "workingDirectory": null,
       "secrets": null,
@@ -641,7 +633,7 @@
         },
         {
           "name": "TZ",
-          "value": "Europe/London"
+          "value": "Africa/Johannesburg"
         },
         {
           "name": "XMPP_AUTH_DOMAIN",
@@ -664,10 +656,6 @@
       "ulimits": null,
       "dnsServers": [],
       "mountPoints": [
-        {
-	  "sourceVolume": "jitsi-config",
-	  "containerPath": "/config"
-	},
         {
 	  "sourceVolume": "jitsi-transcripts",
 	  "containerPath": "/transcripts"
@@ -770,7 +758,7 @@
         },
         {
           "name": "TZ",
-          "value": "Europe/London"
+          "value": "Africa/Johannesburg"
         },
         {
           "name": "XMPP_AUTH_DOMAIN",
@@ -789,10 +777,6 @@
       "ulimits": null,
       "dnsServers": [],
       "mountPoints": [
-        {
-	  "sourceVolume": "jitsi-config",
-	  "containerPath": "/config"
-	}
       ],
       "workingDirectory": null,
       "secrets": null,
@@ -996,7 +980,7 @@
         },
         {
           "name": "TZ",
-          "value": "Europe/London"
+          "value": "Africa/Johannesburg"
         },
         {
           "name": "XMPP_AUTH_DOMAIN",
@@ -1039,10 +1023,6 @@
       "ulimits": null,
       "dnsServers": [],
       "mountPoints": [
-        {
-	  "sourceVolume": "jitsi-config",
-	  "containerPath": "/config"
-	}
       ],
       "workingDirectory": null,
       "secrets": null,
@@ -1175,7 +1155,7 @@
         },
         {
           "name": "TZ",
-          "value": "Europe/London"
+          "value": "Africa/Johannesburg"
         },
         {
           "name": "XMPP_AUTH_DOMAIN",
@@ -1206,10 +1186,6 @@
       "ulimits": null,
       "dnsServers": [],
       "mountPoints": [
-        {
-	  "sourceVolume": "jitsi-config",
-	  "containerPath": "/config"
-	},
         {
 	  "sourceVolume": "jitsi-transcripts",
 	  "containerPath": "/usr/share/jitsi-meet/transcripts"
@@ -1309,7 +1285,7 @@
         "autoprovision": true,
         "driver": "local",
         "labels": {
-          "recordings": "jitsi"
+          "transcripts": "jitsi"
         }
       }
     },
