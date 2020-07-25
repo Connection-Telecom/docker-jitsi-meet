@@ -1,3 +1,97 @@
+## stable-4857
+
+Based on stable release 4857.
+
+* a81ad73 prosody: add support for lobby
+* baed605 web: fix removing closed captions button if transcription is enabled
+* edecacd etherpad: add ability to use a external server
+* a7563d4 jvb: use JVB_TCP_PORT for exposing the port
+* b235ea1 prosody: disable s2s module
+* 1d428a8 prosody: use a 2-stage build
+* 613c26c misc: working on latest
+* 4d72ee3 release: stable-4627-1
+* 22b7063 examples: update Traefik v1 example
+* 1381b08 prosody: fix installing dependdencies
+* 2900c11 misc: add extra line to tag message
+* c57a84b misc: working on latest
+
+## stable-4627-1
+
+Based on stable release 4627-1.
+
+* 1381b08 prosody: fix installing dependdencies
+* 2900c11 misc: add extra line to tag message
+* c57a84b misc: working on latest
+
+## stable-4627
+
+Based on stable release 4627.
+
+* fdf5030 prosody: update configuration
+* afafe23 prosody: shrink container size
+* 8e7ea34 base: fix setting timezone
+* 58441ae doc: update README
+* 3c12526 etherpad: update to version 1.8.4
+* 0038e71 jibri: install extra dependency
+* 0615ed6 doc: add missing volumes to quick start
+* 2781865 doc: clarify usage of gen-passwords.sh
+* a8d0b6c build: add PHONY target for "release"
+* d4a35a6 misc: working on latest
+
+## stable-4548-1
+
+Based on stable release 4548-1.
+
+* abf2f73 jicofo: fix setting incorrect auth URL scheme for JWT
+* 3472ab0 jicofo: add ability to configure health checks
+* ec3622b jibri: install jitsi-upload-integrations by default
+* 0e7bc91 etherpad: pin image version
+* 4fa50b9 jwt: do not load token_verification module with disabled authentication
+* b0d76a2 jibri: add jq dep for upload integrations
+* 53b58fd jvb: add jq, curl deps for graceful_shutdown.sh
+* 2d063ad doc: update installation instructions
+* e73df5f misc: working on latest
+
+## stable-4548
+
+Based on stable release 4548.
+
+* a79fc0c misc: add release script
+* 0f0adc8 compose: add image tag to compose files
+* 0177765 misc: fix config volumes to work with SELinux
+* eae3f5c jibri: chrome/driver 78 as a stopgap
+* 78df6a4 doc: delete unnecessary dot
+* 4426ed8 jibri: fix case when /dev/snd is not bound (https://github.com/jitsi/docker-jitsi-meet/issues/240#issuecomment-610422404)
+* 125775a web: fix WASM MIME type
+* e70975e web: enable GZIP compression for more file types
+* 774aba5 misc: set ddefault timezone to UTC
+* 3c3fc19 prosody: enable speaker stats and conferene duration modules
+* f911df2 jvb: set JVB_TCP_MAPPED_PORT default value
+* 1205170 jvb: allow `TCP_HARVESTER_MAPPED_PORT` to be configured
+* f7796a1 prosody: add volume  /prosody-plugins-custom to docker-compose
+* d44230e prosody: use hashed xmpp auth
+
+## stable-4416
+
+Based on stable release 4416.
+
+* b039b29 web: use certbot-auto
+* b95c95d web: improve nginx configuration
+* 2dd6b99 k8s: specify namespace for secret
+* 7aa2d81 ldap: avoid unnecessary copy
+* e1b47db exampless: update Traefik v2 example with UDP
+* 0940605 doc: fix typos and minor grammar issues in README
+* 1c4b11c doc: correct minor mistake
+* c06867b doc: added steps for updating kernel manually in AWS installation
+* dc46215 web: remove DHE suites support
+* 367621f prosody: remove no longer needed patch
+* 34e6601 doc: clarify acronym
+* 2c95ab7 web: revert using PUBLIC_URL for BOSH URL
+* 7fd7e2b Add docker-compose.override.yml to .gitignore (#438)
+* 67a941b misc: update gen-passwords.sh shell code
+* 4e2cec6 misc: add configurable service restart policy
+* 729f9d2 doc: fix typo in env.example
+
 ## stable-4384(-1)
 
 **Important security note:** Previous releases included default passwords for

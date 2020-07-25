@@ -34,7 +34,6 @@ clean:
 
 prepare:
 	docker pull debian:stretch-slim
-	docker pull etherpad/etherpad
 	FORCE_REBUILD=1 $(MAKE)
 
 ecr-login:
@@ -94,4 +93,4 @@ ecs-up:
 ecs-compose:
 	( cd deploy/lon-conf-telviva-com; ecs-cli compose --file docker-compose.yml up )
 
-.PHONY: all build tag push clean prepare
+.PHONY: all build tag push clean prepare release
