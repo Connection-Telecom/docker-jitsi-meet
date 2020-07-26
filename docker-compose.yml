@@ -11,7 +11,8 @@ services:
         volumes:
             - ${CONFIG}/web:/config:Z
             - ${CONFIG}/web/letsencrypt:/etc/letsencrypt:Z
-            - ${CONFIG}/transcripts:/usr/share/jitsi-meet/transcripts:Z
+            - /root/jigasi-transcripts:/usr/share/jitsi-meet/transcripts:Z
+            - /root/jibri-recordings:/usr/share/jitsi-meet/recordings:Z
         environment:
             - ENABLE_AUTH
             - ENABLE_GUESTS
@@ -174,7 +175,8 @@ services:
             - '${JIGASI_PORT_MIN}-${JIGASI_PORT_MAX}:${JIGASI_PORT_MIN}-${JIGASI_PORT_MAX}/udp'
         volumes:
             - ${CONFIG}/jigasi:/config
-            - ${CONFIG}/transcripts:/tmp/transcripts
+            - /root/jigasi-log:/config/log
+            - /root/jigasi-transcripts:/tmp/transcripts
         environment:
             - ENABLE_AUTH
             - XMPP_AUTH_DOMAIN
@@ -218,6 +220,8 @@ services:
         restart: ${RESTART_POLICY}
         volumes:
             - ${CONFIG}/jibri:/config
+            - /root/jibri-recordings:/config/recordings
+            - /root/jibri-logs:/config/logs
             - /dev/shm:/dev/shm
         cap_add:
             - SYS_ADMIN
