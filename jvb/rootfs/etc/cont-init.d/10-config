@@ -1,5 +1,11 @@
 #!/usr/bin/with-contenv bash
 
+# SLD: retrieve IPs
+CONTAINER_IP="`ifconfig eth0 | awk '/^ *inet / { print $2 }'`"
+HOST_IP="`curl http://169.254.169.254/latest/meta-data/local-ipv4 2>/dev/null`"
+export CONTAINER_IP HOST_IP
+# SLD: end
+
 if [[ -z $JVB_AUTH_PASSWORD ]]; then
     echo 'FATAL ERROR: JVB auth password must be set'
     exit 1
