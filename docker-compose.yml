@@ -50,9 +50,10 @@ services:
         image: jitsi/prosody:latest
         restart: ${RESTART_POLICY}
         expose:
-            - '5222'
             - '5347'
             - '5280'
+        ports:
+            - '5222:5222'
         volumes:
             - ${CONFIG}/prosody/config:/config:Z
             - ${CONFIG}/prosody/prosody-plugins-custom:/prosody-plugins-custom:Z
