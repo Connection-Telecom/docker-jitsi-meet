@@ -168,10 +168,10 @@ XMPP_GUEST_DOMAIN=guest.meet.jitsi
 XMPP_MODULES=
 
 # Custom Prosody modules for MUC component (comma separated)
-XMPP_MUC_MODULES=
+XMPP_MUC_MODULES=muc_allowners
 
 # Custom Prosody modules for internal MUC component (comma separated)
-XMPP_INTERNAL_MUC_MODULES=
+XMPP_INTERNAL_MUC_MODULES=muc_allowners
 
 # MUC for the JVB pool.
 JVB_BREWERY_MUC=jvbbrewery
@@ -243,10 +243,10 @@ ENABLE_TRANSCRIPTIONS=1
 JIGASI_TRANSCRIBER_RECORD_AUDIO=true
 
 # Jigasi will send transcribed text to the chat when transcriber is on. Default false.
-JIGASI_TRANSCRIBER_SEND_TXT=true
+JIGASI_TRANSCRIBER_SEND_TXT=false
 
 # Jigasi will post an url to the chat with transcription file. Default false.
-JIGASI_TRANSCRIBER_ADVERTISE_URL=true
+JIGASI_TRANSCRIBER_ADVERTISE_URL=false
 
 # Credentials for connect to Cloud Google API from Jigasi
 # Please read https://cloud.google.com/text-to-speech/docs/quickstart-protocol section "Before you begin" paragraph 1 to 5.
