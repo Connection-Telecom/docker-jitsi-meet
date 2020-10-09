@@ -68,11 +68,13 @@ if [[ ! -f /config/nginx/site-confs/default ]]; then
     tpl /defaults/default > /config/nginx/site-confs/default
 fi
 
-cp /defaults/config.js /config/config.js
-tpl /defaults/system-config.js >> /config/config.js
-tpl /defaults/settings-config.js >> /config/config.js
-if [[ -f /config/custom-config.js ]]; then
-    cat /config/custom-config.js >> /config/config.js
+if [[ ! -f /config/config.js ]]; then
+    cp /defaults/config.js /config/config.js
+    tpl /defaults/system-config.js >> /config/config.js
+    tpl /defaults/settings-config.js >> /config/config.js
+    if [[ -f /config/custom-config.js ]]; then
+        cat /config/custom-config.js >> /config/config.js
+    fi
 fi
 
 if [[ ! -f /config/interface_config.js ]]; then
